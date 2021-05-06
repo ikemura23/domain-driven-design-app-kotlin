@@ -21,4 +21,12 @@ private fun chapter2() {
     // 2.2.3 値オブジェクト同士の比較
     val name3 = FullName(firstName = name.firstName, "kazutaka")
     println("${name == name3}")
+
+    // 2.3 値のチェックは値オブジェクト内で行われるべき
+    try {
+        FullName(firstName = name.firstName, "") // NGである空白を入れてみる
+    } catch (e: Exception) {
+        println(e.stackTraceToString())
+    }
+
 }
