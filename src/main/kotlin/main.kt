@@ -13,4 +13,12 @@ private fun chapter2() {
 
     // 値オブジェクトは代入できない
     // name.firstName = ""
+
+    // 値を変更するには交換しかない
+    val name2 = FullName(firstName = name.firstName, "hoge")
+    println("${name2.firstName} ${name2.lastName}")
+
+    // 2.2.3 値オブジェクト同士の比較
+    val name3 = FullName(firstName = name.firstName, "kazutaka")
+    println("${name == name3}")
 }
