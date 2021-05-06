@@ -28,5 +28,9 @@ private fun chapter2() {
     } catch (e: Exception) {
         println(e.stackTraceToString())
     }
-
+    try {
+        FullName(firstName = "池村", lastName = "kazutaka") // アルファベット以外はNG
+    } catch (e: Exception) {
+        println(e.stackTraceToString())
+    }
 }
