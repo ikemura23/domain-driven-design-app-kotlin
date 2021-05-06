@@ -41,4 +41,10 @@ private fun chapter2() {
     // お金の加算処理
     val mony3: Mony = mony1 + mony2
     println("${mony3.amount} ${mony3.currency}") // 3000 JPY
+    try {
+        val mony4 = Mony(2000L.toBigDecimal(), "USD")
+        mony1 + mony4 // 通貨が違うと例外がスローされる
+    } catch (e: Exception) {
+        println(e.stackTraceToString())
+    }
 }

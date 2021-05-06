@@ -1,5 +1,6 @@
 package domain
 
+import java.lang.IllegalArgumentException
 import java.math.BigDecimal
 
 /**
@@ -15,6 +16,7 @@ data class Mony(
      * 加算処理
      */
     operator fun plus(mony: Mony): Mony {
+        if (this.currency != mony.currency) throw IllegalArgumentException("通貨単位が異なります。")
         return Mony(mony.amount.add(this.amount), mony.currency)
     }
 }
