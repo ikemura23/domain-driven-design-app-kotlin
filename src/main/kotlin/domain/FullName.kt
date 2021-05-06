@@ -7,7 +7,11 @@ package domain
 data class FullName(val firstName: String, val lastName: String) {
     init {
         // 2.3 値のチェックは値オブジェクト内で行われるべき
-        require(firstName.isNotEmpty())
-        require(lastName.isNotEmpty())
+//        require(firstName.isNotEmpty())
+//        require(lastName.isNotEmpty())
+
+        // こちらのチェックのほうが親切
+        if (firstName.isEmpty()) throw IllegalArgumentException("firstNameは1文字以上である必要があります。")
+        if (lastName.isEmpty()) throw IllegalArgumentException("lastNameは1文字以上である必要があります。")
     }
 }
