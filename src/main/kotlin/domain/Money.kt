@@ -21,4 +21,11 @@ data class Money(
         // 値オブジェクトは不変なので計算後は新たなインスンスを生成して返す
         return Money(money.amount.add(this.amount), money.currency)
     }
+
+    /**
+     * 2.4.1 掛け算は定義されない
+     */
+    operator fun times(money: Money) {
+        // 通貨の乗算はできない
+    }
 }
