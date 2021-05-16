@@ -4,7 +4,6 @@ import domain.Mony
 fun main() {
     println("chapter2")
     chapter2()
-
 }
 
 private fun chapter2() {
