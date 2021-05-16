@@ -1,5 +1,5 @@
 import domain.FullName
-import domain.Mony
+import domain.Money
 
 fun main() {
     println("chapter2")
@@ -35,14 +35,14 @@ private fun chapter2() {
     }
 
     // 2.4 ふるまいをもった値オブジェクト
-    val mony1 = Mony(1000L.toBigDecimal(), "JPY")
-    val mony2 = Mony(2000L.toBigDecimal(), "JPY")
+    val money1 = Money(1000L.toBigDecimal(), "JPY")
+    val money2 = Money(2000L.toBigDecimal(), "JPY")
     // お金の加算処理
-    val mony3: Mony = mony1 + mony2
-    println("${mony3.amount} ${mony3.currency}") // 3000 JPY
+    val money3: Money = money1 + money2
+    println("${money3.amount} ${money3.currency}") // 3000 JPY
     try {
-        val moneyJpy = Mony(1000L.toBigDecimal(), "JPY")
-        val moneyUsd = Mony(2000L.toBigDecimal(), "USD")
+        val moneyJpy = Money(1000L.toBigDecimal(), "JPY")
+        val moneyUsd = Money(2000L.toBigDecimal(), "USD")
         moneyJpy + moneyUsd // 通貨が違うと例外がスローされる
     } catch (e: Exception) {
         println(e.stackTraceToString())
