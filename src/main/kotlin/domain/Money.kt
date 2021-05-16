@@ -16,7 +16,9 @@ data class Money(
      * 加算処理
      */
     operator fun plus(money: Money): Money {
+        // 通貨が同一かチェック
         if (this.currency != money.currency) throw IllegalArgumentException("通貨単位が異なります。")
+        // 値オブジェクトは不変なので計算後は新たなインスンスを生成して返す
         return Money(money.amount.add(this.amount), money.currency)
     }
 }
