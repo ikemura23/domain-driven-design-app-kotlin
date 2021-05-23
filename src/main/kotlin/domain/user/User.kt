@@ -1,9 +1,13 @@
 package domain.user
 
+import kotlin.random.Random
+
 /**
  * 2.5.3 ユーザーのEntity
  */
-data class User(val id: UserId, var name: UserName) {
+data class User(var name: UserName) {
+    var id: UserId = UserId(Random(100).nextInt().toString())
+        private set
 
     /**
      * ユーザー名の変更
