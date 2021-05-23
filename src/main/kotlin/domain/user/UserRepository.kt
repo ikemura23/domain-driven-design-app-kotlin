@@ -12,5 +12,5 @@ interface UserRepository {
     /**
      * 重複確認
      */
-    fun exists(user: User): Boolean
+    fun find(user: User): Boolean
 }

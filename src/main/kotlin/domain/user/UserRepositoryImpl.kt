@@ -5,7 +5,7 @@ class UserRepositoryImpl : UserRepository {
         // TODO: DBに保存する処理
     }
 
-    override fun exists(user: User): Boolean {
+    override fun find(user: User): Boolean {
         // TODO: DBに重複チェックする処理
         return false
     }
