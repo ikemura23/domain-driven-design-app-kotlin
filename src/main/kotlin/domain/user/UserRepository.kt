@@ -13,4 +13,8 @@ interface UserRepository {
      * 重複確認
      */
     fun find(userName: UserName): Boolean
+
+    fun find(userId: UserId): Boolean
+
+    fun delete(user: User)
 }

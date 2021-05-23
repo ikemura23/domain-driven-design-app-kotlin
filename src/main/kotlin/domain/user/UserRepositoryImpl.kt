@@ -6,7 +6,16 @@ class UserRepositoryImpl : UserRepository {
     }
 
     override fun find(userName: UserName): Boolean {
-        // TODO: DBに重複チェックする処理
+        // TODO: DBにuserNameを重複チェックする処理
         return false
+    }
+
+    override fun find(userId: UserId): Boolean {
+        // TODO: DBにuserIdを重複チェックする処理
+        return true
+    }
+
+    override fun delete(user: User) {
+        // TODO: DBからuserを削除
     }
 }
