@@ -1,7 +1,7 @@
 package domain.user
 
 /**
- * 2.5.3 ユーザーの値オブジェクト
+ * 2.5.3 ユーザーのEntity
  */
 data class User(val id: UserId, var name: UserName) {
 
