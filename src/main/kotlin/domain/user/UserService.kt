@@ -8,5 +8,5 @@ class UserService(private val userRepository: UserRepository) {
     /**
      * 重複を確認する
      */
-    fun exists(user: User): Boolean = userRepository.find(user)
+    fun exists(userName: UserName): Boolean = userRepository.find(userName)
 }
