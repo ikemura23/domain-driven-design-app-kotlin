@@ -1,9 +1,11 @@
 import domain.FullName
 import domain.Money
+import domain.user.UserApplicationService
 
 fun main() {
     println("chapter2")
-    chapter2()
+//    chapter2()
+    chapter6()
 }
 
 private fun chapter2() {
@@ -47,4 +49,8 @@ private fun chapter2() {
     } catch (e: Exception) {
         println(e.stackTraceToString())
     }
+}
+
+fun chapter6() {
+    UserApplicationService().run()
 }
